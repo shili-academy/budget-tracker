@@ -6,6 +6,7 @@ function App() {
   return (
     <>
     <Input type='text' placeholder='Money'/>
+    <Input type='text' placeholder='Money'/>
     <Button type='submit'>Submit</Button>
     </>
   );
