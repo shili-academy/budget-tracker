@@ -1,13 +1,20 @@
 import "./App.css";
-import Input from "./components/Input";
-import Button from "./components/Button";
+import React from "react";
+import Forms from "./components/Forms";
+import TongQuanChiPhi from "./components/TongQuanChiPhi";
+import Transactions from "./components/Transactions";
 
 function App() {
+  const [transactions, setTransactions] = React.useState([{ id: 1, monney: 100 }]);
+  const typeTransitions = ["income", "expense"];
+  const categories = ["salary", "food", "shopping", "entertainment"];
+
+
   return (
     <>
-      <Input type="text" placeholder="Money" />
-      <Input type="text" placeholder="Money" />
-      <Button type="submit">Submit</Button>
+      <TongQuanChiPhi/>
+      <Forms categories={categories} typeTransitions={typeTransitions} />
+      <Transactions transactions={transactions} />
     </>
   );
 }
